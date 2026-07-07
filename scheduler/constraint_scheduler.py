@@ -1,36 +1,45 @@
+from models.scheduled_activity import ScheduledActivity
+
+
 class ConstraintScheduler:
+    """
+    Basic scheduler (Phase 1)
+
+    This version simply assigns each activity to the first
+    available room and time slot.
+
+    Constraints will be added in later phases.
+    """
+
     def __init__(self, context):
         self.context = context
 
-    def is_faculty_available(...):
-        ...
+    def schedule(self, activities, timeslots):
 
-    def is_section_available(...):
-        ...
+        assignments = []
 
-    def is_room_available(...):
-        ...
+        if not self.context.rooms:
+            raise Exception("No rooms available for scheduling.")
 
-    def check_room_capacity(...):
-        ...
+        room = self.context.rooms[0]
 
-    def check_room_type(...):
-        ...
+        slot_index = 0
 
-    def check_shift(...):
-        ...
+        for activity in activities:
 
-    def check_practical_continuity(...):
-        ...
+            if slot_index >= len(timeslots):
+                raise Exception(
+                    "Not enough time slots to schedule all activities."
+                )
 
-    def check_open_minor(...):
-        ...
+            assignment = ScheduledActivity(
+                activity=activity,
+                timeslot=timeslots[slot_index],
+                room_id=room.room_id
+            )
 
-    def check_lunch(...):
-        ...
+            assignments.append(assignment)
 
-    def check_faculty_load(...):
-        ...
+            slot_index += activity.duration
 
-    def is_feasible(...):
-        ...
+        return assignments

@@ -23,7 +23,6 @@ def main():
     # ---------------------------------------------------------
 
     loader = LoadCompleteData()
-
     dataframe = loader.load()
 
     # ---------------------------------------------------------
@@ -31,7 +30,6 @@ def main():
     # ---------------------------------------------------------
 
     validator = DataValidator(dataframe)
-
     validator.validate()
 
     # ---------------------------------------------------------
@@ -39,7 +37,6 @@ def main():
     # ---------------------------------------------------------
 
     course_mapper = CourseMapper(dataframe)
-
     courses = course_mapper.map_courses()
 
     # ---------------------------------------------------------
@@ -47,7 +44,6 @@ def main():
     # ---------------------------------------------------------
 
     section_mapper = SectionMapper(dataframe)
-
     sections = section_mapper.map_sections()
 
     # ---------------------------------------------------------
@@ -59,8 +55,10 @@ def main():
     database.courses = courses
     database.sections = sections
 
-    # Faculties, Rooms and Labs will be added
-    # after their respective mappers are created.
+    # These will be populated when their mappers are implemented
+    # database.faculties
+    # database.rooms
+    # database.labs
 
     # ---------------------------------------------------------
     # Database Summary
@@ -93,7 +91,6 @@ def main():
     # ---------------------------------------------------------
 
     engine = SchedulerEngine(context)
-
     engine.initialize()
 
     # ---------------------------------------------------------
@@ -104,7 +101,6 @@ def main():
 
     activities = activity_generator.generate()
 
-    # Store generated activities in scheduler context
     context.activities = activities
 
     print("\nTotal Activities :", len(activities))
