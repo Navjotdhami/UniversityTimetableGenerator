@@ -11,6 +11,7 @@ from core.scheduler_context import SchedulerContext
 from scheduler.scheduler_engine import SchedulerEngine
 from scheduler.activity_generator import ActivityGenerator
 
+
 def main():
 
     print("=" * 60)
@@ -56,7 +57,6 @@ def main():
     database = UniversityDatabase()
 
     database.courses = courses
-
     database.sections = sections
 
     # Faculties, Rooms and Labs will be added
@@ -83,13 +83,9 @@ def main():
     context = SchedulerContext()
 
     context.courses = database.courses
-
     context.sections = database.sections
-
     context.faculties = database.faculties
-
     context.rooms = database.rooms
-
     context.labs = database.labs
 
     # ---------------------------------------------------------
@@ -99,17 +95,25 @@ def main():
     engine = SchedulerEngine(context)
 
     engine.initialize()
+
+    # ---------------------------------------------------------
+    # Generate Activities
+    # ---------------------------------------------------------
+
     activity_generator = ActivityGenerator(database.courses)
 
     activities = activity_generator.generate()
+
+    # Store generated activities in scheduler context
+    context.activities = activities
 
     print("\nTotal Activities :", len(activities))
 
     print("\nFirst Five Activities\n")
 
     for activity in activities[:5]:
+        print(activity)
 
-    print(activity)
     # ---------------------------------------------------------
     # Sample Output
     # ---------------------------------------------------------
@@ -119,7 +123,6 @@ def main():
     print("\nFirst Five Sections\n")
 
     for section in sections[:5]:
-
         print(section)
 
 
