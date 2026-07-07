@@ -1,0 +1,63 @@
+# Scheduler Version 2
+
+## Goal
+
+Generate a conflict-free university timetable.
+
+## Hard Constraints
+
+- Teacher cannot teach two classes simultaneously.
+- Room cannot be double-booked.
+- Section cannot attend two classes simultaneously.
+- Lab activities require exactly two consecutive periods.
+- Labs must be scheduled only in laboratory rooms.
+- Room capacity must satisfy section strength.
+- Weekly hours must be fully allocated.
+- Teacher unavailable slots must be respected.
+
+## Soft Constraints
+
+- Balanced faculty workload.
+- Minimize idle periods.
+- Spread lectures across the week.
+- Reduce room movement.
+- Better room utilization.
+
+## Scheduling Order
+
+1. Fixed Events
+2. Labs
+3. Shared Faculty
+4. Large Sections
+5. Lectures
+6. Tutorials
+
+## Algorithm
+
+Recursive Backtracking
+
+Candidate Generation
+
+↓
+
+Constraint Checking
+
+↓
+
+Commit
+
+↓
+
+Next Activity
+
+↓
+
+Conflict
+
+↓
+
+Rollback
+
+↓
+
+Next Candidate
