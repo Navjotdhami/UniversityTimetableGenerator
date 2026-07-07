@@ -1,0 +1,120 @@
+================================================================================
+UNIVERSITY TIMETABLE GENERATOR
+SCHEMA REPORT
+================================================================================
+
+================================================================================
+FILE : Complete Load Data.xlsx
+================================================================================
+
+Sheets Found : 1
+
+--------------------------------------------------------------------------------
+Sheet : Sheet1
+--------------------------------------------------------------------------------
+Rows    : 4626
+Columns : 43
+
+COLUMN INFORMATION
+--------------------------------------------------------------------------------
+School                                  object         Missing : 409
+Program                                 object         Missing : 1243
+Section                                 object         Missing : 1
+FINAL SECTION                           object         Missing : 0
+Section to punch                        object         Missing : 305
+Year                                    object         Missing : 0
+Term                                    int64          Missing : 0
+Course Code                             object         Missing : 440
+Course Title                            object         Missing : 0
+L                                       int64          Missing : 0
+T                                       int64          Missing : 0
+P                                       int64          Missing : 0
+Groups                                  int64          Missing : 0
+TL                                      int64          Missing : 0
+TT                                      int64          Missing : 0
+TP                                      int64          Missing : 0
+TO REGISTER AS                          object         Missing : 0
+Course Domain                           object         Missing : 1514
+UID                                     object         Missing : 1578
+Shift Timings                           object         Missing : 4571
+Faculty
+Domain                          object         Missing : 2931
+FACULTY TYPE                            object         Missing : 1621
+No of Students                          float64        Missing : 1074
+Course Type                             object         Missing : 1724
+Course Remarks                          float64        Missing : 4626
+Remarks                                 object         Missing : 1837
+Code                                    object         Missing : 4617
+OVERALL                                 object         Missing : 2322
+Commencement                            object         Missing : 1074
+Status                                  object         Missing : 2496
+Name                                    object         Missing : 4625
+UID.1                                   float64        Missing : 4626
+Commencement.1                          object         Missing : 0
+SDF                                     float64        Missing : 4626
+df                                      object         Missing : 4623
+Comparison                              float64        Missing : 4626
+df.1                                    object         Missing : 2963
+DF                                      float64        Missing : 4626
+Unnamed: 38                             float64        Missing : 4626
+Unnamed: 39                             float64        Missing : 4626
+Unnamed: 40                             float64        Missing : 4626
+Unnamed: 41                             object         Missing : 4625
+Unnamed: 42                             float64        Missing : 4625
+
+================================================================================
+FILE : Constraints.xlsx
+================================================================================
+
+Sheets Found : 1
+
+--------------------------------------------------------------------------------
+Sheet : Sheet1
+--------------------------------------------------------------------------------
+Rows    : 1
+Columns : 6
+
+COLUMN INFORMATION
+--------------------------------------------------------------------------------
+Institution Type                        object         Missing : 0
+Working Days                            object         Missing : 0
+Periods Per Day                         int64          Missing : 0
+Period Duration                         object         Missing : 0
+Schedule Pattern (Traditional/Block/A-B/Double Shift)object         Missing : 0
+Notes                                   object         Missing : 0
+
+================================================================================
+FILE : Computer Lab and ECE Lab List.xlsx
+================================================================================
+
+Sheets Found : 1
+
+--------------------------------------------------------------------------------
+Sheet : Sheet1
+--------------------------------------------------------------------------------
+Rows    : 25
+Columns : 2
+
+COLUMN INFORMATION
+--------------------------------------------------------------------------------
+Lab number                              object         Missing : 0
+Type                                    object         Missing : 0
+
+================================================================================
+FILE : Room type with capasity.xlsx
+================================================================================
+
+Sheets Found : 1
+
+--------------------------------------------------------------------------------
+Sheet : Sheet1
+--------------------------------------------------------------------------------
+Rows    : 432
+Columns : 3
+
+COLUMN INFORMATION
+--------------------------------------------------------------------------------
+Room Number                             object         Missing : 185
+Type                                    object         Missing : 185
+Capacity                                float64        Missing : 196
+

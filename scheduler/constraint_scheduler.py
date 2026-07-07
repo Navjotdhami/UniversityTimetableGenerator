@@ -1,0 +1,36 @@
+class ConstraintScheduler:
+    def __init__(self, context):
+        self.context = context
+
+    def is_faculty_available(...):
+        ...
+
+    def is_section_available(...):
+        ...
+
+    def is_room_available(...):
+        ...
+
+    def check_room_capacity(...):
+        ...
+
+    def check_room_type(...):
+        ...
+
+    def check_shift(...):
+        ...
+
+    def check_practical_continuity(...):
+        ...
+
+    def check_open_minor(...):
+        ...
+
+    def check_lunch(...):
+        ...
+
+    def check_faculty_load(...):
+        ...
+
+    def is_feasible(...):
+        ...
